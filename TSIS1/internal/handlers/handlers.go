@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/gorilla/mux"
-	"github.com/po133na/golang/tsis1/api"
+	"github.com/po133na/tsis1/api"
 )
 
 func GetBreeds(w http.ResponseWriter, r *http.Request) {
