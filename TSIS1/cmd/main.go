@@ -1,6 +1,7 @@
 package main
 
 import (
+	"tsis1/internal/handlers"
 	"log"
 	"net/http"
 
@@ -11,7 +12,7 @@ func main() {
 	log.Println("starting server...")
 	router := mux.NewRouter()
 
-	log.Println("Creating routes")
+	log.Println("creating routes")
 	router.HandleFunc("/breeds", handlers.GetBreeds).Methods("GET")
 	router.HandleFunc("/breeds/breed_name/{breed_name}", handlers.GetBreedByName).Methods("GET")
 	router.HandleFunc("/breeds/{id}", handlers.GetBreedById).Methods("GET")
