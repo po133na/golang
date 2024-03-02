@@ -19,5 +19,5 @@ func main() {
 	r.HandleFunc("/breeds", GetBreedByName)
 
 	log.Println("Server started on :8080")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
